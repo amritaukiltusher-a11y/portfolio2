@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amrita Ukil Tusher — Freelance SEO Expert Portfolio">
+  <title>Amrita Ukil Tusher | SEO Expert</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --surface:#11182b;
+      --surface2:#17213a;
+      --text:#f4f7ff;
+      --muted:#a9b4cc;
+      --accent:#7c5cff;
+      --accent2:#20d3a7;
+      --border:rgba(255,255,255,.10);
+      --shadow:0 20px 60px rgba(0,0,0,.30);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:linear-gradient(135deg,#080d1b 0%,#0d1427 55%,#10152b 100%);
+      color:var(--text);line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{
+      position:fixed;top:0;left:0;width:100%;z-index:50;
+      background:rgba(8,13,27,.72);backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:20px;font-weight:800;letter-spacing:.2px}
+    .logo span{color:var(--accent2)}
+    .nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px}
+    .nav-links a:hover{color:#fff}
+    .hero{padding:145px 0 90px;min-height:760px;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;padding:8px 13px;
+      border:1px solid var(--border);background:rgba(255,255,255,.04);
+      border-radius:999px;color:#cfd7ea;font-size:13px;margin-bottom:22px
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 15px var(--accent2)}
+    h1{font-size:clamp(46px,7vw,82px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+    h1 .gradient{background:linear-gradient(90deg,#fff,var(--accent2),#8c75ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:19px;color:var(--muted);max-width:620px;margin-bottom:32px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:13px 20px;border-radius:12px;font-weight:700;border:1px solid var(--border);transition:.25s}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#5b42e8);box-shadow:0 12px 35px rgba(124,92,255,.25)}
+    .btn-secondary{background:rgba(255,255,255,.04)}
+    .btn:hover{transform:translateY(-2px)}
+    .photo-wrap{position:relative;display:flex;justify-content:center}
+    .photo-wrap::before{
+      content:"";position:absolute;width:360px;height:360px;border-radius:50%;
+      background:radial-gradient(circle,rgba(124,92,255,.28),transparent 68%);filter:blur(10px)
+    }
+    .photo{
+      width:min(390px,100%);aspect-ratio:1/1;object-fit:cover;border-radius:30px;
+      border:1px solid var(--border);box-shadow:var(--shadow);position:relative;
+      object-position:center top;
+    }
+    section{padding:95px 0}
+    .section-head{margin-bottom:40px}
+    .kicker{color:var(--accent2);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:2px}
+    h2{font-size:clamp(32px,5vw,48px);line-height:1.1;margin-top:8px}
+    .section-head p{color:var(--muted);max-width:680px;margin-top:12px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .card{
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
+      border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:var(--shadow)
+    }
+    .about-text{font-size:17px;color:#d4dbee}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .fact{padding:20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.025)}
+    .fact strong{display:block;font-size:22px;margin-bottom:4px}
+    .fact span{color:var(--muted);font-size:13px}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .skill{padding:24px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.035)}
+    .skill-icon{font-size:27px;margin-bottom:12px}
+    .skill h3{margin-bottom:7px}
+    .skill p{color:var(--muted);font-size:14px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{padding:28px;border-radius:20px;background:var(--surface);border:1px solid var(--border)}
+    .service h3{margin:13px 0 8px}
+    .service p{color:var(--muted);font-size:14px}
+    .service .num{font-size:13px;color:var(--accent2);font-weight:800}
+    .timeline{border-left:1px solid var(--border);padding-left:26px}
+    .timeline-item{position:relative;padding-bottom:28px}
+    .timeline-item::before{content:"";position:absolute;left:-33px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(124,92,255,.12)}
+    .timeline-item h3{margin-bottom:5px}
+    .timeline-item p{color:var(--muted)}
+    .contact-box{
+      display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;
+      background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(32,211,167,.08));
+      border:1px solid var(--border);border-radius:26px;padding:40px
+    }
+    .contact-box p{color:var(--muted);margin-top:10px}
+    .contact-links{display:flex;gap:12px;flex-wrap:wrap}
+    .contact-link{padding:12px 16px;background:rgba(0,0,0,.18);border:1px solid var(--border);border-radius:12px;font-size:14px}
+    footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:13px}
+    @media(max-width:850px){
+      .nav-links{display:none}
+      .hero{padding-top:120px}
+      .hero-grid,.about-grid{grid-template-columns:1fr}
+      .hero-grid{gap:45px}
+      .photo-wrap{order:-1}
+      .photo{width:290px}
+      .skills,.services{grid-template-columns:1fr}
+      .contact-box{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="#home">Amrita<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Available for freelance projects</div>
+          <h1>Hi, I'm <span class="gradient">Amrita Ukil Tusher</span>.</h1>
+          <p>Freelancer &amp; SEO Expert helping businesses improve their online visibility, attract the right audience, and build a stronger digital presence.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#contact">Let's Work Together</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div class="photo-wrap">
+          <img class="photo" src="profile.jpg" alt="Portrait of Amrita Ukil Tusher">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">About Me</div>
+          <h2>Turning search into opportunity.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <p class="about-text">I'm Amrita Ukil Tusher, a freelancer and SEO expert with 2 years of experience. I focus on practical SEO strategies that help websites become more visible in search engines and connect with their target audience.</p>
+            <br>
+            <p class="about-text">With a background in Mathematics, I bring an analytical and problem-solving mindset to digital marketing and SEO.</p>
+          </div>
+          <div class="facts">
+            <div class="fact"><strong>2+</strong><span>Years of Experience</span></div>
+            <div class="fact"><strong>SEO</strong><span>Primary Expertise</span></div>
+            <div class="fact"><strong>BSc</strong><span>Mathematics</span></div>
+            <div class="fact"><strong>Freelance</strong><span>Work Focus</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Skills</div>
+          <h2>What I do best.</h2>
+          <p>Core capabilities focused on improving search visibility and building a better online presence.</p>
+        </div>
+        <div class="skills">
+          <div class="skill"><div class="skill-icon">🔎</div><h3>SEO Strategy</h3><p>Research-driven strategies designed to improve organic search visibility.</p></div>
+          <div class="skill"><div class="skill-icon">📊</div><h3>Keyword Research</h3><p>Finding relevant search opportunities and targeting the right audience.</p></div>
+          <div class="skill"><div class="skill-icon">📝</div><h3>On-Page SEO</h3><p>Optimizing content, headings, metadata, internal links, and page structure.</p></div>
+          <div class="skill"><div class="skill-icon">🌐</div><h3>Off-Page SEO</h3><p>Supporting authority and visibility through quality-focused off-page work.</p></div>
+          <div class="skill"><div class="skill-icon">⚙️</div><h3>Technical SEO</h3><p>Identifying technical opportunities that can improve crawlability and performance.</p></div>
+          <div class="skill"><div class="skill-icon">📈</div><h3>SEO Analysis</h3><p>Analyzing performance and using data to guide SEO improvements.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Services</div>
+          <h2>How I can help.</h2>
+        </div>
+        <div class="services">
+          <div class="service"><div class="num">01</div><h3>SEO Audit</h3><p>A structured review of your website to identify SEO issues and growth opportunities.</p></div>
+          <div class="service"><div class="num">02</div><h3>On-Page Optimization</h3><p>Improve page structure, content relevance, metadata, and internal linking.</p></div>
+          <div class="service"><div class="num">03</div><h3>Keyword Research</h3><p>Build focused keyword opportunities around search intent and business goals.</p></div>
+          <div class="service"><div class="num">04</div><h3>Technical SEO</h3><p>Find and prioritize technical improvements that support search performance.</p></div>
+          <div class="service"><div class="num">05</div><h3>SEO Reporting</h3><p>Clear performance insights to understand progress and decide the next steps.</p></div>
+          <div class="service"><div class="num">06</div><h3>Freelance SEO Support</h3><p>Flexible ongoing SEO assistance for businesses, agencies, and personal projects.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Experience &amp; Education</div>
+          <h2>My professional journey.</h2>
+        </div>
+        <div class="card">
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Freelance SEO Expert</h3>
+              <p>2 years of experience in freelance SEO, focusing on search visibility, website optimization, and SEO analysis.</p>
+            </div>
+            <div class="timeline-item">
+              <h3>BSc in Mathematics</h3>
+              <p>Academic background in Mathematics, strengthening analytical thinking, logical reasoning, and problem-solving skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <div class="kicker">Contact</div>
+            <h2>Let's build something better.</h2>
+            <p>Have an SEO project or need freelance support? Get in touch and let's discuss your goals.</p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:amritaukiltusher@gmail.com">✉ Email</a>
+            <a class="contact-link" href="tel:01301200247">☎ Call</a>
+            <a class="contact-link" href="https://www.facebook.com/amrita.ukil.tusher.0" target="_blank" rel="noopener">f Facebook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Amrita Ukil Tusher. All rights reserved.</div>
+  </footer>
+</body>
+</html>
